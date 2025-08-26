@@ -142,7 +142,7 @@ def main():
         current_time = datetime.now(beijing_tz).date()
         expiry_time = datetime.strptime(before_date_str, '%Y-%m-%d').date()
         days_left = (expiry_time - current_time).days
-        is_already_safe = days_left >= 5
+        is_already_safe = days_left >= 4
         logger.info(f"当前北京日期: {current_time}, 剩余天数: {days_left}天。")
         if is_already_safe:
             logger.info("到期时间充裕 (>=5天)，本次操作为健康检查或重复执行。")
